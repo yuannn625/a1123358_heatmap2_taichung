@@ -1,61 +1,67 @@
-<style>
-    body {
-        /* background-color: #E8E8D0; */ /* 註解掉背景色設定 */
-        margin: 0;
-        font-family: Arial, sans-serif;
-        position: relative;
-        height: 100vh;
-    }
-    h1 {
-        text-align: center;
-        margin-top: 20px;
-        color: #333;
-        z-index: 2;
-        position: relative;
-    }
-    .description {
-        text-align: center;
-        margin: 20px;
-        color: #666;
-        font-size: 16px;
-        line-height: 1.5;
-        z-index: 2;
-        position: relative;
-    }
-    .iframe-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: calc(100% - 200px); /* 減去標題和註解的高度 */
-        z-index: 0; /* 設定在最下層 */
-        position: absolute; /* 使其可完全位於底層 */
-        top: 200px;
-        left: 0;
-        width: 100%;
-    }
-    iframe {
-        width: 100%;
-        height: 100%; /* 確保圖表填滿容器 */
-        border: none;
-    }
-    .footer {
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-        color: #B9B973; /* 設定註解文字顏色 */
-        font-size: 14px;
-        z-index: 2;
-    }
-</style>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台中市65-80歲及80歲以上人口統計圖</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+        .description {
+            text-align: center;
+            margin: 20px;
+            color: #666;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .iframe-container {
+            display: flex;
+            flex: 1;
+            width: 100%;
+            height: calc(100% - 200px); /* 減去標題和描述的高度 */
+        }
+        .iframe-left, .iframe-right {
+            flex: 1;
+            height: 100%;
+        }
+        .iframe-left iframe, .iframe-right iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 標題 -->
+    <h1>台中市65-80歲及80歲以上人口統計圖</h1>
+    
+    <!-- 描述文字 -->
+    <div class="description">
+        根據統計資料顯示，台中市大里區及北屯區65歲以上人口數最高，反映出當地在醫療資源配置上的相對完善。完善的醫療設施與交通便利性，使長者更傾向在此定居，並能獲得穩定且即時的健康照護服務。此外，這些地區也多設有日照中心、長照機構與社區關懷據點，進一步提升長者的生活品質。<br>
+        相對而言，和平區由於接近山區，長者所能接觸到的醫療與照護資源相對有限。因此，建議市政府針對類似偏鄉地區，強化長者照護服務的建造。例如，設立社區醫療站，並推動長者友善空間及休閒設施的興建，讓高齡者即使居住於非市中心區域，也能享有同等的照護品質與生活便利。
+    </div>
 
-<!-- 新增的標題和描述 -->
-<h1>台中市65歲以上人口統計圖</h1>
-<div class="description">
-    根據統計資料顯示，台中市大里區及北屯區65歲以上人口數最高，反映出當地在醫療資源配置上的相對完善。完善的醫療設施與交通便利性，使長者更傾向在此定居，並能獲得穩定且即時的健康照護服務。此外，這些地區也多設有日照中心、長照機構與社區關懷據點，進一步提升長者的生活品質。<br>
-    相對而言，和平區由於接近山區，長者所能接觸到的醫療與照護資源相對有限。因此，建議市政府針對類似偏鄉地區，強化長者照護服務的建造。例如，設立社區醫療站，並推動長者友善空間及休閒設施的興建，讓高齡者即使居住於非市中心區域，也能享有同等的照護品質與生活便利。
-</div>
-
-<!-- 圖表區域 -->
-<div class="iframe-container">
-    <iframe src="https://plotdb.io/v/chart/37358" width="100%" height="600px" allowfullscreen="true" frameborder="0"></iframe>
-</div>
+    <!-- 圖表區域 -->
+    <div class="iframe-container">
+        <!-- 左邊 (65-80歲人口統計圖) -->
+        <div class="iframe-left">
+            <iframe src="https://plotdb.io/v/chart/37325" allowfullscreen="true" frameborder="0"></iframe>
+        </div>
+        <!-- 右邊 (80歲以上人口統計圖) -->
+        <div class="iframe-right">
+            <iframe src="https://plotdb.io/v/chart/37358" allowfullscreen="true" frameborder="0"></iframe>
+        </div>
+    </div>
+</body>
+</html>
