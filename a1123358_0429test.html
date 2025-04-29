@@ -1,54 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>台中市65歲以上高齡人口村里統計圖</title>
-    <style>
-        body {
-            background-color: #E8E8D0; /* 設定整個畫面的背景色 */
-            margin: 0;
-            font-family: Arial, sans-serif;
-            position: relative;
-            height: 100vh;
-        }
-        h1 {
-            text-align: center;
-            margin-top: 20px;
-            color: #333;
-        }
-        .iframe-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: calc(100% - 100px); /* 減去標題和註解的高度 */
-        }
-        iframe {
-            width: 100%;
-            height: 600px;
-            border: none;
-        }
-        .footer {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            color: #B9B973; /* 設定註解文字顏色 */
-            font-size: 14px;
-        }
-    </style>
-</head>
-<body>
-    <!-- 標題 -->
-    <h1>台中市65歲以上高齡人口村里統計圖</h1>
-    
-    <!-- 熱圖 iframe 容器 -->
-    <div class="iframe-container">
-        <iframe src="https://plotdb.io/v/chart/37358" allowfullscreen="true"></iframe>
-    </div>
-    
-    <!-- 註解文字 -->
-    <div class="footer">
-        人口顏色分類依據為人口數的最小值、Q1、Q2、Q3及最大值Q4
-    </div>
-</body>
-</html>
+<style>
+    body {
+        background-color: #E8E8D0; /* 設定整個畫面的背景色 */
+        margin: 0;
+        font-family: Arial, sans-serif;
+        position: relative;
+        height: 100vh;
+    }
+    h1 {
+        text-align: center;
+        margin-top: 20px;
+        color: #333;
+        z-index: 2;
+        position: relative;
+    }
+    .description {
+        text-align: center;
+        margin: 20px;
+        color: #666;
+        font-size: 16px;
+        line-height: 1.5;
+        z-index: 2;
+        position: relative;
+    }
+    .iframe-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100% - 100px); /* 減去標題和註解的高度 */
+        z-index: 0; /* 設定在最下層 */
+        position: absolute; /* 使其可完全位於底層 */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    iframe {
+        width: 100%;
+        height: 100%; /* 確保圖表填滿容器 */
+        border: none;
+    }
+    .footer {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        color: #B9B973; /* 設定註解文字顏色 */
+        font-size: 14px;
+        z-index: 2;
+    }
+</style>
