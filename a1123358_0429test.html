@@ -1,67 +1,129 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>台中市65-80歲及80歲以上人口統計圖</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        h1 {
-            text-align: center;
-            margin-top: 20px;
-            color: #333;
-        }
-        .description {
-            text-align: center;
-            margin: 20px;
-            color: #666;
-            font-size: 16px;
-            line-height: 1.5;
-        }
-        .iframe-container {
-            display: flex;
-            flex: 1;
-            width: 100%;
-            height: calc(100% - 200px); /* 減去標題和描述的高度 */
-        }
-        .iframe-left, .iframe-right {
-            flex: 1;
-            height: 100%;
-        }
-        .iframe-left iframe, .iframe-right iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>台中市高齡人口統計與青銀共遊計畫</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", Arial, sans-serif;
+      background-color: #f5f6f8;
+      color: #333;
+      line-height: 1.7;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #2c3e50;
+      margin: 40px 20px 10px;
+    }
+    h3 {
+      color: #444;
+      margin-top: 20px;
+    }
+    .section {
+      padding: 40px 20px;
+      border-bottom: 1px solid #ddd;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .description, .summary {
+      margin: 0 auto;
+      max-width: 900px;
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    iframe {
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+      margin-top: 20px;
+    }
+    .iframe-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .iframe-half {
+      flex: 1 1 48%;
+    }
+    .image-text-block {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      margin-top: 30px;
+      gap: 30px;
+    }
+    .image-block {
+      flex: 1 1 45%;
+    }
+    .text-block {
+      flex: 1 1 50%;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
-    <!-- 標題 -->
+
+  <!-- 頁面一：人口統計 -->
+  <div class="section" id="page1">
     <h1>台中市65-80歲及80歲以上人口統計圖</h1>
-    
-    <!-- 描述文字 -->
     <div class="description">
-        根據統計資料顯示，台中市大里區及北屯區65歲以上人口數最高，(左圖為65-80歲人口統計圖，右圖為80歲以上人口統計圖)，反映出當地在醫療資源配置上的相對完善。完善的醫療設施與交通便利性，使長者更傾向在此定居，並能獲得穩定且即時的健康照護服務。此外，這些地區也多設有日照中心、長照機構與社區關懷據點，進一步提升長者的生活品質。<br>
-        相對而言，和平區由於接近山區，長者所能接觸到的醫療與照護資源相對有限。因此，建議市政府針對類似偏鄉地區，強化長者照護服務的建造。例如，設立社區醫療站，並推動長者友善空間及休閒設施的興建，讓高齡者即使居住於非市中心區域，也能享有同等的照護品質與生活便利。
+      根據統計資料顯示，台中市大里區及北屯區65歲以上人口數最高，反映出當地在醫療資源配置上的相對完善。完善的醫療設施與交通便利性，使長者更傾向在此定居，並能獲得穩定且即時的健康照護服務。此外，這些地區也多設有日照中心、長照機構與社區關懷據點，進一步提升長者的生活品質。相對而言，和平區由於接近山區，長者所能接觸到的醫療與照護資源相對有限。因此，建議市政府針對類似偏鄉地區，強化長者照護服務的建造。例如，設立社區醫療站，並推動長者友善空間及休閒設施的興建，讓高齡者即使居住於非市中心區域，也能享有同等的照護品質與生活便利。
     </div>
 
-    <!-- 圖表區域 -->
-    <div class="iframe-container">
-        <!-- 左邊 (65-80歲人口統計圖) -->
-        <div class="iframe-left">
-            <iframe src="https://plotdb.io/v/chart/37325" allowfullscreen="true" frameborder="0"></iframe>
-        </div>
-        <!-- 右邊 (80歲以上人口統計圖) -->
-        <div class="iframe-right">
-            <iframe src="https://plotdb.io/v/chart/37358" allowfullscreen="true" frameborder="0"></iframe>
-        </div>
+    <iframe src="https://plotdb.io/v/chart/37334" height="500px"></iframe>
+
+    <div class="iframe-row">
+      <div class="iframe-half">
+        <iframe src="https://plotdb.io/v/chart/37325" height="400px"></iframe>
+      </div>
+      <div class="iframe-half">
+        <iframe src="https://plotdb.io/v/chart/37358" height="400px"></iframe>
+      </div>
     </div>
+
+    <div class="summary">
+      <h3>圖表小結</h3>
+      <p><strong>上方圖（65歲以上人口統計圖）：</strong>中區和北屯區最高，尤其中區地小人多，老年人口集中，與都市更新緩慢與人口外移有關。</p>
+      <p><strong>左下圖（65-80歲人口統計圖）：</strong>大里區及北屯區最多，顯示這些區域因醫療與生活機能完善，適合長者居住。</p>
+      <p><strong>右下圖（80歲以上人口統計圖）：</strong>和平區與大安區最少，因地處偏遠、人口外移與產業發展緩慢所致。</p>
+    </div>
+  </div>
+
+  <!-- 頁面二：青銀共遊計畫 -->
+  <div class="section" id="page2">
+    <h1>集點子競賽</h1>
+    <h2>青銀共遊計畫 - 連同世代，樂活人生</h2>
+
+    <div class="image-text-block">
+      <div class="image-block">
+  <img src="oooooooooo.png" alt="青銀共遊示意圖">
+</div>
+
+      <div class="text-block">
+        青銀共遊計畫的執行，以「連通」為核心，最終讓長者願意跨出家門。在我的家鄉台中市烏日區，雖然長者看似有時間出遊，實際上卻因缺乏動力、費用考量等原因選擇宅在家中。因此，我們設計青銀共遊機制，由年輕人陪同出遊，提升其參與感與安全感。本計畫與政府與觀光景點合作，推行「年輕人門票折扣、長者免票」政策，降低成本疑慮；另於行前說明安全注意事項，並於旅途中教導使用旅遊APP（如地圖與廁所查詢），提升旅遊便利與自信。
+      </div>
+    </div>
+  </div>
+
+  <!-- 頁面三：可延伸介紹或補充資料 -->
+  <div class="section" id="page3">
+    <h1>延伸說明與未來展望</h1>
+    <div class="description">
+      青銀共遊計畫未來可與長照政策、數位學習平台整合，讓年輕人透過志工參與制度取得服務學習時數，同時也能建立跨世代對話平台。對地方政府而言，這樣的政策設計不僅能提高高齡者的生活品質，也能促進地方經濟與觀光，同時實踐高齡友善城市的理念。
+    </div>
+  </div>
+
 </body>
 </html>
