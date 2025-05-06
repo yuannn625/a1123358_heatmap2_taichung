@@ -23,40 +23,80 @@
     }
     .section {
       padding: 40px 20px;
+      border-bottom: 1px solid #ddd;
       max-width: 1200px;
       margin: 0 auto;
+    }
+    .description, .summary {
+      margin: 0 auto;
+      max-width: 900px;
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    iframe {
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+      margin-top: 20px;
+    }
+    .iframe-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .iframe-half {
+      flex: 1 1 48%;
     }
     .image-text-block {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       align-items: flex-start;
-      gap: 40px;
+      justify-content: center;
+      gap: 5%;
       margin-top: 30px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    .image-block, .text-block {
-      flex: 0 1 500px;
-      box-sizing: border-box;
-    }
-    .image-block img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    .image-block {
+      flex: 0 1 45%;
     }
     .text-block {
+      flex: 0 1 45%;
       background: #fff;
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
     .bold {
       font-weight: bold;
     }
     .highlight {
-      color: #66B3FF;
+      background: #66B3FF;
+      border-radius: 4px;
+      padding: 0 4px;
+    }
+    .back-button {
+      text-align: center;
+      margin: 60px 0 20px;
+    }
+    .back-button a {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #3498db;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
       font-weight: bold;
-      text-decoration: underline;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
   </style>
 </head>
@@ -101,13 +141,10 @@
       <div class="text-block">
         <h3 class="bold">內容:</h3>
         <p>
-          <span class="highlight">以青銀共遊計畫</span>的執行，<span class="highlight">「連通」為核心</span>，最終讓長者願意跨出家門。
-          在我的家鄉台中市烏日區，雖然長者看似有時間出遊，實際上卻因
-          <span class="highlight">缺乏動力、費用考量</span>等原因選擇宅在家中。
-          因此，我們設計青銀共遊機制，由年輕人陪同出遊，提升其參與感與安全感。
-          本計畫與政府與觀光景點合作，推行
-          <span class="highlight">「年輕人門票折扣、長者免票」</span>政策，降低成本疑慮；
-          另於行前說明安全注意事項，並於旅途中
+          <span class="highlight">青銀共遊計畫</span>的執行，以
+          <span class="highlight">「連通」為核心</span>，最終讓長者願意跨出家門。在我的家鄉台中市烏日區，雖然長者看似有時間出遊，實際上卻因
+          <span class="highlight">缺乏動力、費用考量</span>等原因選擇宅在家中。因此，我們設計青銀共遊機制，由年輕人陪同出遊，提升其參與感與安全感。本計畫與政府與觀光景點合作，推行
+          <span class="highlight">「年輕人門票折扣、長者免票」</span>政策，降低成本疑慮；另於行前說明安全注意事項，並於旅途中
           <span class="highlight">教導使用旅遊APP</span>（如地圖與廁所查詢），提升旅遊便利與自信。
         </p>
 
@@ -117,17 +154,9 @@
     </div>
   </div>
 
-  <div style="text-align: center; margin-top: 40px;">
-    <a href="#page1" style="
-      display: inline-block;
-      padding: 12px 24px;
-      background-color: #3498db;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    ">返回首頁</a>
+  <!-- 返回首頁按鈕 -->
+  <div class="back-button">
+    <a href="#page1">返回首頁</a>
   </div>
 
 </body>
