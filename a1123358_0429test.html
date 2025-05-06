@@ -54,18 +54,18 @@
       display: flex;
       flex-wrap: wrap;
       align-items: flex-start;
-      justify-content: space-between;
-      margin-top: 30px;
+      justify-content: center;
       gap: 5%;
-      width: 70%;         /* ✅ 將整個區塊限制為 70% */
-      margin-left: auto;  /* ✅ 水平置中 */
-      margin-right: auto; /* ✅ 水平置中 */
+      margin-top: 30px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .image-block {
-      flex: 0 1 35%;
+      flex: 0 1 45%;
     }
     .text-block {
-      flex: 0 1 35%;
+      flex: 0 1 45%;
       background: #fff;
       padding: 20px;
       border-radius: 8px;
@@ -78,6 +78,25 @@
     }
     .bold {
       font-weight: bold;
+    }
+    .highlight {
+      background: #66B3FF;
+      border-radius: 4px;
+      padding: 0 4px;
+    }
+    .back-button {
+      text-align: center;
+      margin: 60px 0 20px;
+    }
+    .back-button a {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #3498db;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
   </style>
 </head>
@@ -122,13 +141,12 @@
       <div class="text-block">
         <h3 class="bold">內容:</h3>
         <p>
-  <span style="background: #66B3FF; border-radius: 4px; padding: 0 4px;">青銀共遊計畫</span>的執行，以
-  <span style="background: #66B3FF; border-radius: 4px; padding: 0 4px;">「連通」為核心</span>，最終讓長者願意跨出家門。在我的家鄉台中市烏日區，雖然長者看似有時間出遊，實際上卻因
-  <span style="background: #66B3FF; border-radius: 4px; padding: 0 4px;">缺乏動力、費用考量</span>等原因選擇宅在家中。因此，我們設計青銀共遊機制，由年輕人陪同出遊，提升其參與感與安全感。本計畫與政府與觀光景點合作，推行
-  <span style="background: #66B3FF; border-radius: 4px; padding: 0 4px;">「年輕人門票折扣、長者免票」</span>政策，降低成本疑慮；另於行前說明安全注意事項，並於旅途中
-  <span style="background: #66B3FF; border-radius: 4px; padding: 0 4px;">教導使用旅遊APP</span>（如地圖與廁所查詢），提升旅遊便利與自信。
-</p>
-
+          <span class="highlight">青銀共遊計畫</span>的執行，以
+          <span class="highlight">「連通」為核心</span>，最終讓長者願意跨出家門。在我的家鄉台中市烏日區，雖然長者看似有時間出遊，實際上卻因
+          <span class="highlight">缺乏動力、費用考量</span>等原因選擇宅在家中。因此，我們設計青銀共遊機制，由年輕人陪同出遊，提升其參與感與安全感。本計畫與政府與觀光景點合作，推行
+          <span class="highlight">「年輕人門票折扣、長者免票」</span>政策，降低成本疑慮；另於行前說明安全注意事項，並於旅途中
+          <span class="highlight">教導使用旅遊APP</span>（如地圖與廁所查詢），提升旅遊便利與自信。
+        </p>
 
         <h3 class="bold">延伸說明與未來展望:</h3>
         <p>青銀共遊計畫未來可與長照政策、數位學習平台整合，讓年輕人透過志工參與制度取得服務學習時數，同時也能建立跨世代對話平台。對地方政府而言，這樣的政策設計不僅能提高高齡者的生活品質，也能促進地方經濟與觀光，同時實踐高齡友善城市的理念。</p>
@@ -136,25 +154,10 @@
     </div>
   </div>
 
-</body>
-</html>
- </div>
-      </div>
-    </div>
-
-    <div style="text-align: center; margin-top: 40px;">
-      <a href="#page1" style="
-        display: inline-block;
-        padding: 12px 24px;
-        background-color: #3498db;
-        color: white;
-        text-decoration: none;
-        border-radius: 6px;
-        font-weight: bold;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-      ">返回首頁</a>
-    </div>
-    
+  <!-- 返回首頁按鈕 -->
+  <div class="back-button">
+    <a href="#page1">返回首頁</a>
   </div>
+
 </body>
 </html>
