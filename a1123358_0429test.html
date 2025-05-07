@@ -180,12 +180,19 @@
     </div>
   </div>
 
-   <!-- 返回頂端按鈕 -->
+    <!-- 返回頂端按鈕 -->
   <div class="back-button">
-    <a href="#top" style="background-color: #66B3FF; color: white; border-radius: 6px; padding: 12px 24px; font-weight: bold; text-decoration: none; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+    <a href="javascript:void(0)" onclick="scrollToTop()" style="background-color: #66B3FF; color: white; border-radius: 6px; padding: 12px 24px; font-weight: bold; text-decoration: none; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
       返回頂端
     </a>
   </div>
 
-  <!-- 標記頁面頂端位置 -->
-  <div id="top"></div>
+  <!-- JavaScript -->
+  <script>
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'  // 使用平滑滾動效果
+      });
+    }
+  </script>
