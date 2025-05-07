@@ -39,16 +39,28 @@
       width: 100%;
       border: none;
       border-radius: 6px;
-      margin-top: 20px;
     }
     .iframe-row {
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
-      margin-top: 20px;
+      margin-top: 30px;
+      justify-content: center;
     }
-    .iframe-half {
-      flex: 1 1 48%;
+    .iframe-box {
+      flex: 1 1 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .iframe-box iframe {
+      height: 400px;
+      width: 100%;
+    }
+    .iframe-caption {
+      margin-top: 10px;
+      font-weight: bold;
+      text-align: center;
     }
     .image-text-block {
       display: flex;
@@ -109,22 +121,26 @@
       根據統計資料顯示，台中市大里區及北屯區65歲以上人口數最高，反映出當地在醫療資源配置上的相對完善。完善的醫療設施與交通便利性，使長者更傾向在此定居，並能獲得穩定且即時的健康照護服務。此外，這些地區也多設有日照中心、長照機構與社區關懷據點，進一步提升長者的生活品質。相對而言，和平區由於接近山區，長者所能接觸到的醫療與照護資源相對有限。因此，建議市政府針對類似偏鄉地區，強化長者照護服務的建造。例如，設立社區醫療站，並推動長者友善空間及休閒設施的興建，讓高齡者即使居住於非市中心區域，也能享有同等的照護品質與生活便利。
     </div>
 
-    <iframe src="https://plotdb.io/v/chart/37334" height="500px"></iframe>
-
     <div class="iframe-row">
-      <div class="iframe-half">
-        <iframe src="https://plotdb.io/v/chart/37325" height="400px"></iframe>
+      <div class="iframe-box">
+        <iframe src="https://plotdb.io/v/chart/37334"></iframe>
+        <div class="iframe-caption">65歲以上人口統計圖</div>
       </div>
-      <div class="iframe-half">
-        <iframe src="https://plotdb.io/v/chart/37358" height="400px"></iframe>
+      <div class="iframe-box">
+        <iframe src="https://plotdb.io/v/chart/37325"></iframe>
+        <div class="iframe-caption">65-80歲人口統計圖</div>
+      </div>
+      <div class="iframe-box">
+        <iframe src="https://plotdb.io/v/chart/37358"></iframe>
+        <div class="iframe-caption">80歲以上人口統計圖</div>
       </div>
     </div>
 
     <div class="summary">
       <h3>圖表觀察重點</h3> 
-      <p><strong>65歲以上人口統計圖(上方圖)：</strong>中區和北屯區最高，尤其中區早期發展早，住民年齡偏高，年輕人外移、少子化，使高齡人口比例升高，形成典型都心老化現象。</p> 
-      <p><strong>65-80歲人口統計圖(左下圖)：</strong>大里區與北屯區的65至80歲人口最多，主因在於早期人口基數大，居民逐漸邁入高齡階段，加上這兩區生活機能完整、醫療資源充足，適合長者居住。北屯區更因交通便利與重劃區開發，吸引大量家庭長期定居，人口老化自然顯著。</p> 
-      <p><strong>80歲以上人口統計圖(右下圖)：</strong>和平區與大安區80歲以上人口最少，主因是地處偏遠、人口基數小、發展緩慢，年輕人口多已外移至都市區工作與生活，導致整體人口減少。和平區多為山地，交通不便；大安區則因產業少、聯外道路有限，人口流失嚴重，因此高齡人口絕對數量也偏低。</p> 
+      <p><strong>65歲以上人口統計圖：</strong>中區和北屯區最高，尤其中區早期發展早，住民年齡偏高，年輕人外移、少子化，使高齡人口比例升高，形成典型都心老化現象。</p> 
+      <p><strong>65-80歲人口統計圖：</strong>大里區與北屯區的65至80歲人口最多，主因在於早期人口基數大，居民逐漸邁入高齡階段，加上這兩區生活機能完整、醫療資源充足，適合長者居住。北屯區更因交通便利與重劃區開發，吸引大量家庭長期定居，人口老化自然顯著。</p> 
+      <p><strong>80歲以上人口統計圖：</strong>和平區與大安區80歲以上人口最少，主因是地處偏遠、人口基數小、發展緩慢，年輕人口多已外移至都市區工作與生活，導致整體人口減少。和平區多為山地，交通不便；大安區則因產業少、聯外道路有限，人口流失嚴重，因此高齡人口絕對數量也偏低。</p> 
     </div>
   </div>
 
@@ -141,13 +157,12 @@
       <div class="text-block">
         <h3 class="bold">內容:</h3>
         <p>
-  <span style="color: #66B3FF; font-weight: bold; text-decoration: underline;">青銀共遊計畫</span>的執行，以
-  <span style="color: #66B3FF; font-weight: bold; text-decoration: underline;">「連通」為核心</span>，最終讓長者願意跨出家門。在我的家鄉台中市烏日區，雖然長者看似有時間出遊，實際上卻因
-  <span style="color: #66B3FF; font-weight: bold; text-decoration: underline;">缺乏動力、費用考量</span>等原因選擇宅在家中。因此，我們設計青銀共遊機制，由年輕人陪同出遊，提升其參與感與安全感。本計畫與政府與觀光景點合作，推行
-  <span style="color: #66B3FF; font-weight: bold; text-decoration: underline;">「年輕人門票折扣、長者免票」</span>政策，降低成本疑慮；另於行前說明安全注意事項，並於旅途中
-  <span style="color: #66B3FF; font-weight: bold; text-decoration: underline;">教導使用旅遊APP</span>（如地圖與廁所查詢），提升旅遊便利與自信。
-</p>
-
+          <span style="color: #66B3FF; font-weight: bold; text-decoration: underline;">青銀共遊計畫</span>的執行，
+          <span style="color: #66B3FF; font-weight: bold; text-decoration: underline;">以「連通」為核心</span>，最終讓長者願意跨出家門。在我的家鄉台中市烏日區，雖然長者看似有時間出遊，實際上卻因
+          <span style="color: #66B3FF; font-weight: bold; text-decoration: underline;">缺乏動力、費用考量</span>等原因選擇宅在家中。因此，我們設計青銀共遊機制，由年輕人陪同出遊，提升其參與感與安全感。本計畫與政府與觀光景點合作，推行
+          <span style="color: #66B3FF; font-weight: bold; text-decoration: underline;">「年輕人門票折扣、長者免票」</span>政策，降低成本疑慮；另於行前說明安全注意事項，並於旅途中
+          <span style="color: #66B3FF; font-weight: bold; text-decoration: underline;">教導使用旅遊APP</span>（如地圖與廁所查詢），提升旅遊便利與自信。
+        </p>
 
         <h3 class="bold">延伸說明與未來展望:</h3>
         <p>青銀共遊計畫未來可與長照政策、數位學習平台整合，讓年輕人透過志工參與制度取得服務學習時數，同時也能建立跨世代對話平台。對地方政府而言，這樣的政策設計不僅能提高高齡者的生活品質，也能促進地方經濟與觀光，同時實踐高齡友善城市的理念。</p>
